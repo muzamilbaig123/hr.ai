@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hr.ai Dashboard</title>
+    <link rel="stylesheet" href="../assets/stylesheets/dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="../index.html" style="text-decoration: none;">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+            </div>
+            <span>Hr.ai</span>
+        </div>
+    </a>
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active">
+                Jobs Dashboard
+            </a>
+            <a href="#" class="nav-item">
+                Blogs
+            </a>
+            <a href="#" class="nav-item">
+                Profile
+            </a>
+            <a href="#" class="nav-item">
+                Contact Us
+            </a>
+        </nav>
+        <a href="../index.html" class="nav-item sign-out">
+            <div class="logo-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+            </div>
+            Sign Out
+        </a>
+    </div>
+
+    <main class="main-content">
+        <div class="view" id="jobsView">
+            <div class="header">
+                <h1>Jobs</h1>
+                <button class="btn-primary" onclick="startNewJob()">+ Add Job</button>
+            </div>
+            <div class="jobs-container">
+                <p class="no-jobs">No current jobs</p>
+            </div>
+        </div>
+
+        <div class="view hidden" id="stepFormView">
+            <div class="progress-tracker">
+                <div class="step" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Create Job</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Set Criteria</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Upload Resumes</div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Ranking</div>
+                </div>
+            </div>
+
+            <div class="step-content" id="step1">
+                <div class="form-card">
+                    <h2>Create Job</h2>
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title</label>
+                        <input type="text" id="jobTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobDescription">Job Description</label>
+                        <textarea id="jobDescription" rows="6" required></textarea>
+                        <div class="char-count">0 / Min: 150 - Max: 10,000 characters</div>
+                    </div>
+                    <button class="btn-primary" onclick="nextStep(2)">Next</button>
+                </div>
+            </div>
+
+            <div class="step-content hidden" id="step2">
+                <div class="form-card">
+                    <button class="btn-back" onclick="prevStep()">← Back</button>
+                    <h2>Number of Criteria</h2>
+                    <p class="helper-text">Criteria will be extracted from the Job Description entered before. These are the metrics for resume ranking.</p>
+                    
+                    <div class="criteria-counter">
+                        <button class="btn-counter" onclick="adjustCriteria(-1)">-</button>
+                        <span id="criteriaCount">5</span>
+                        <button class="btn-counter" onclick="adjustCriteria(1)">+</button>
+                    </div>
+                    
+                    <button class="btn-primary" onclick="generateCriteria()">Generate Criteria</button>
+
+                    <div id="criteriaLoader" class="hidden">
+                        <p>Generating criteria...</p>
+                    </div>
+
+                    <div id="criteriaList" class="criteria-list"></div>
+
+                    <button class="btn-primary hidden" id="saveCriteriaBtn" onclick="saveCriteria()">Save Criteria</button>
+                </div>
+            </div>
+
+            <div class="step-content hidden" id="step3">
+                <div class="form-card">
+                    <button class="btn-back" onclick="prevStep()">← Back</button>
+                    <h2>Upload Resumes</h2>
+                    
+                    <div class="upload-area" id="dropZone">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7IGYtvQBurNaTNEDlspyBDKoAdFsxM.png" alt="Upload Icon" class="upload-icon">
+                        <p>Drag and drop your resumes here, or</p>
+                        <button class="btn-primary" onclick="document.getElementById('fileInput').click()">Upload Resumes</button>
+                        <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx" style="display:none;">
+                    </div>
+                    
+                    <div class="upload-status">
+                        <span>Resumes Selected: <span id="selectedCount">0</span></span>
+                        <span>Max Limit: 500</span>
+                    </div>
+
+                    <div id="resumeList" class="resume-list"></div>
+
+                    <button class="btn-primary" onclick="nextStep(4)">Next</button>
+                </div>
+            </div>
+
+            <div class="step-content hidden" id="step4">
+                <div class="form-card">
+                    <button class="btn-back" onclick="prevStep()">← Back</button>
+                    <h2>Resume Rankings</h2>
+                    <div id="rankingList" class="ranking-list"></div>
+                    <button class="btn-primary" onclick="finishProcess()">Finish</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="../assets/javascripts/dashboard.js"></script>
+</body>
+</html>

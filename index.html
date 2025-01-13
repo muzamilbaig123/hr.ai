@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="assets/stylesheets/style.css">
     <link rel="stylesheet" href="assets/stylesheets/responsive.css">
     <script src="assets/javascripts/gsap.js"></script>
+    <link rel="webiste icon" href="favicon.ico.ico">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <a href="/" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
@@ -31,39 +32,14 @@
             <a href="pages/login.html" class="try-now-btn">Try Now</a>
         </div>
     </header>
+    <!-- Header is completed -->
 
-    <main>
-        <!-- <section class="hero">
-            <div class="breadcrumb">
-                <a href="/">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                        <polyline points="9 22 9 12 15 12 15 22"/>
-                    </svg>
-                    Home
-                </a>
-                <span>/</span>
-                <span>HR.ai: Rank and Score Bulk Resumes with GenAI</span>
-            </div>
-    
-            <h1>Your Shortcut to Hiring the Right Candidate</h1>
-            <p>No more manual screening, rank and score bulk resumes with Generative AI</p>
-            <a href="#" class="get-started-btn">Get Started for Free</a>
-    
-            <div class="background-decoration">
-                <div class="diagonal-lines"></div>
-                <div class="purple-blob blob-1"></div>
-                <div class="purple-blob blob-2"></div>
-            </div>
-        </section> -->
-    
-    
+    <main>  
     <div class="body">
         <div class="hero" id="hero">
-            <!-- <h1 class="main-title">Your Shortcut To Hiring The <br /> Right Candidate.</h1> -->
             <div class="herocontent">
             <div class="breadcrumb">
-                <a href="/">
+                <a href="index.html">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                         <polyline points="9 22 9 12 15 12 15 22"/>
@@ -76,7 +52,7 @@
     
             <h1>Your Shortcut to Hiring the Right Candidate</h1>
             <p>No more manual screening, rank and score bulk resumes with Generative AI</p>
-            <a href="#" class="get-started-btn">Get Started for Free</a>
+            <a href="pages/login.html" class="get-started-btn">Get Started for Free</a>
     
             <div class="background-decoration">
                 <div class="diagonal-lines"></div>
@@ -86,10 +62,8 @@
             </div>
     
     
-        <!-- <img class="image1" src="https://assets.codepen.io/9051928/retro.png">
-        <img class="image2" src="https://assets.codepen.io/9051928/retro.png"> -->
-        <img class="image1" src="assets/images/hero.jpg">
-        <img class="image2" src="assets/images/hero-2.jpg">
+        <img class="image1" src="assets/images/hero.webp">
+        <img class="image2" src="assets/images/hero-2.webp">
     
         <svg xmlns="http://www.w3.org/2000/svg" id="svg-mask">
           <defs>
@@ -104,7 +78,6 @@
     
         <svg id="svgFilter" style="position: fixed;">
           <filter id="pixelate" x="0" y="0" filterUnits="objectBoundingBox">
-    
             <feGaussianBlur stdDeviation="20" />
             <feComponentTransfer>
               <feFuncA type="discrete" tableValues="1 1" />
@@ -114,8 +87,7 @@
       </div>
         </div>
     
-    
-        <!-- Add this section after the hero section -->
+        <!-- key befifts -->
     <section class="benefits">
         <h2>Key Benefits</h2>
         <div class="benefits-grid">
@@ -131,7 +103,6 @@
             </div>
             
             <div class="connector"></div>
-            
             <div class="benefit-card">
                 <div class="benefit-icon">
                     <svg viewBox="0 0 24 24">
@@ -145,7 +116,6 @@
             </div>
             
             <div class="connector"></div>
-            
             <div class="benefit-card">
                 <div class="benefit-icon">
                     <svg viewBox="0 0 24 24">
@@ -159,7 +129,8 @@
             </div>
         </div>
     </section>
-    <!-- Add this section after the benefits section -->
+
+    <!-- how it work -->
     <section class="how-it-works" id="howitwork">
         <h2>How it Works</h2>
         <!-- first step -->
@@ -170,7 +141,7 @@
             </div>
             
             <div class="how-image">
-                <img src="assets/images/Createjob.gif" alt="Create job demonstration">
+                <img src="assets/images/1st.webp" alt="Create job demonstration" />
             </div>
         </div>
         <!-- 2nd step -->
@@ -181,24 +152,34 @@
             </div>
             
             <div class="how-image">
-                <img src="assets/images/Createjob.gif" alt="Create job demonstration">
+                <img src="assets/images/2nd.webp" alt="Create job demonstration" />
             </div>
         </div>
         
         <!-- 3rd step -->
         <div class="how-content how-content-3">
             <div class="how-text">
-                <h3>2. Set Criteria</h3>
+                <h3>3. Upload Resume</h3>
                 <p>Let AI auto-generate key scoring criteria from your job details.</p>
             </div>
             
             <div class="how-image">
-                <img src="assets/images/Createjob.gif" alt="Create job demonstration">
+                <img src="assets/images/3rd.webp" alt="Create job demonstration" />
+            </div>
+        </div>
+        
+        <!-- 3rd step -->
+        <div class="how-content how-content-3">
+            
+            <div class="how-image">
+                <img src="assets/images/4th.webp" alt="Create job demonstration" />
+            </div>
+            <div class="how-text">
+                <h3>4. Ranking</h3>
+                <p>Let AI auto-generate key scoring criteria from your job details.</p>
             </div>
         </div>
     </section>
-    
-    
         <!-- Add this section after the hero section -->
     <section class="features">
         <h2>Key Features</h2>
@@ -260,17 +241,16 @@
             </div>
         </div>
     </section>
-    
     <!-- Add this section after the features section -->
     <section class="use-cases">
         <h2>Use Cases</h2>
         <div class="use-cases-grid">
             <div class="use-case-card">
                 <img 
-                    src="assets/images/createjob.gif" 
-                    alt="Network visualization showing connected user profiles" 
-                    class="use-case-image"
-                >
+                    src="assets/images/1.webp" 
+                    alt="Hiring Managers" 
+                    class="use-case-image"   
+                />
                 <div class="use-case-content">
                     <h3 class="use-case-title">Hiring Managers</h3>
                     <p class="use-case-description">
@@ -281,10 +261,10 @@
     
             <div class="use-case-card">
                 <img 
-                    src="assets/images/createjob.gif" 
-                    alt="Professional workspace with digital recruitment tools" 
+                    src="assets/images/2.jpg" 
+                    alt="Recruitment Agencies" 
                     class="use-case-image"
-                >
+                />
                 <div class="use-case-content">
                     <h3 class="use-case-title">Recruitment Agencies</h3>
                     <p class="use-case-description">
@@ -295,8 +275,8 @@
     
             <div class="use-case-card">
                 <img 
-                    src="assets/images/createjob.gif" 
-                    alt="Holographic display of connected team members" 
+                    src="assets/images/3.jpg" 
+                    alt="Hr Departments" 
                     class="use-case-image"
                 >
                 <div class="use-case-content">
@@ -327,19 +307,11 @@
                 
                 <ul class="plan-features">
                     <li>
-                        <span class="check-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </span>
+                        <img src="assets/images/pricing.webp" alt="pricing icon" width="24px" />
                         5 fixed jobs
                     </li>
                     <li>
-                        <span class="check-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </span>
+                        <img src="assets/images/pricing.webp" alt="pricing icon" width="24px" />
                         50 resumes per job
                     </li>
                 </ul>
@@ -358,27 +330,16 @@
                 
                 <ul class="plan-features">
                     <li>
-                        <span class="check-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
+                        <img src="assets/images/pricing.webp" alt="pricing icon" width="24px" />
                         </span>
                         20 jobs per month
                     </li>
                     <li>
-                        <span class="check-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </span>
+                        <img src="assets/images/pricing.webp" alt="pricing icon" width="24px" />
                         250 resumes per job
                     </li>
                     <li>
-                        <span class="check-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </span>
+                        <img src="assets/images/pricing.webp" alt="pricing icon" width="24px" />
                         Add 5 more jobs for $10
                     </li>
                 </ul>
@@ -397,27 +358,15 @@
                 
                 <ul class="plan-features">
                     <li>
-                        <span class="check-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </span>
+                        <img src="assets/images/pricing.webp" alt="pricing icon" width="24px" />
                         100 jobs per month
                     </li>
                     <li>
-                        <span class="check-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </span>
+                        <img src="assets/images/pricing.webp" alt="pricing icon" width="24px" />
                         1000 resumes per job
                     </li>
                     <li>
-                        <span class="check-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </span>
+                        <img src="assets/images/pricing.webp" alt="pricing icon" width="24px" />
                         Add 5 more jobs for $8
                     </li>
                 </ul>
@@ -431,8 +380,6 @@
             </div>
         </div>
     </section>
-    
-    
     <section class="testimonials">
         <h2>What Recruiters Are Saying</h2>
         
@@ -446,7 +393,7 @@
                 </div>
                 <h3 class="testimonial-name">Mike Johnson</h3>
                 <p class="testimonial-role">Recruiter</p>
-                <p class="testimonial-text">Resumes Ranker saved me hours on every job posting! The scoring is spot-on!</p>
+                <p class="testimonial-text">HR.ai saved me hours on every job posting! The scoring is spot-on!</p>
                 <div class="star-rating">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
@@ -525,14 +472,11 @@
             </div>
         </div>
     </section>
-    
-    
-    
     <section class="faq-section">
         <div class="faq-container">
             <div class="faq-header">
                 <h2>Frequently Asked Questions</h2>
-                <p>Find answers to common questions about Resumes Ranker.</p>
+                <p>Find answers to common questions about HR.ai.</p>
             </div>
     
             <div class="faq-list">
@@ -574,46 +518,43 @@
     
                 <div class="faq-item">
                     <div class="faq-question" role="button" aria-expanded="false" tabindex="0">
-                        What is Resumes Ranker?
+                        What is HR.ai?
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </div>
                     <div class="faq-answer">
-                        Resumes Ranker is an AI-powered resume screening platform that helps recruiters and HR professionals efficiently process and evaluate job applications. It provides automated ranking, scoring, and insights for better hiring decisions.
+                        HR.ai is an AI-powered resume screening platform that helps recruiters and HR professionals efficiently process and evaluate job applications. It provides automated ranking, scoring, and insights for better hiring decisions.
                     </div>
                 </div>
     
                 <div class="faq-item">
                     <div class="faq-question" role="button" aria-expanded="false" tabindex="0">
-                        How does Resumes Ranker ensure unbiased results?
+                        How does HR.ai ensure unbiased results?
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </div>
                     <div class="faq-answer">
-                        Resumes Ranker uses objective criteria based solely on skills, experience, and qualifications. The AI is trained to ignore demographic information and focuses only on job-relevant factors, promoting fair and unbiased candidate evaluation.
+                        HR.ai uses objective criteria based solely on skills, experience, and qualifications. The AI is trained to ignore demographic information and focuses only on job-relevant factors, promoting fair and unbiased candidate evaluation.
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    
     <!-- cta section -->
     <section class="cta-section">
         <div class="cta-container">
             <div class="cta-content">
                 <h2>Ready to fully utilize your candidate pool?</h2>
-                <p>Join recruiters who are hiring smarter, faster, and fairer with Resumes Ranker</p>
+                <p>Join recruiters who are hiring smarter, faster, and fairer with HR.ai</p>
                 <a href="#" class="cta-button">Get Started For Free</a>
             </div>
         </div>
     </section>
-       
     </main>
-       
 
+    <!-- footer start -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-content">
@@ -625,7 +566,7 @@
                                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
                             </svg>
                         </div>
-                        Resumes Ranker
+                        HR.ai
                     </a>
                     <p class="footer-description">
                         No more manual screening, rank and score bulk resumes with Generative AI
@@ -681,14 +622,11 @@
                     <a href="/terms">Terms & Conditions</a>
                     <a href="/cookies">Cookie Policy</a>
                 </div>
-                <p class="copyright">© 2024 Sketric Solutions. All rights reserved</p>
+                <p class="copyright">© 2024 Haris Solutions. All rights reserved</p>
             </div>
         </div>
     </footer>
-    
-    
-    
-    <script src="assets/javascripts/app.js"></script>
 
+    <script src="assets/javascripts/app.js"></script>
 </body>
 </html>
