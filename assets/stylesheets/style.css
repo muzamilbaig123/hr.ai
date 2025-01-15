@@ -21,7 +21,7 @@ body {
 /* Header Styles */
 header {
     background: var(--background-color);
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -127,7 +127,8 @@ nav a.active::after {
   .herocontent {
     position: absolute;
     z-index: 1000;
-    top: 10rem;
+    /* top: 10rem; */
+    top: 8rem;
     color: white;
     font-size: 48px;
     color: #000;

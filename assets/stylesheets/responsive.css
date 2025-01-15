@@ -133,6 +133,19 @@
     .pricing-card.featured {
         transform: none;
     }
+    .header-container a img {
+        width: 80%;
+    }
+    .try-now-btn{
+        padding: 8px 20px;
+    }
+    .try-now-btn:hover{
+        background-color: var(--primary-color);
+    }
+    .breadcrumb{
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
 }
 
 
@@ -203,6 +216,9 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
     }
+    .herocontent{
+        top: 6rem;
+    }
 }
 
 @media (max-width: 640px) {
@@ -226,7 +242,11 @@
         gap: 1rem;
     }
 }
-
+@media screen and (max-width: 509px) {
+    .herocontent{
+        top: 4rem;
+    }
+}
 
 
 
