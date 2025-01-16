@@ -15,6 +15,9 @@
     .header-container {
         padding: 0 1rem;
     }
+    .wrapinnng{
+        flex-direction: none !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -24,6 +27,15 @@
 
     .breadcrumb {
         font-size: 0.875rem;
+    }
+    .hero{
+        height: 80vh;
+    }
+    .breadcrumb span{
+        font-size: 15px;
+    }
+    .herocontent{
+        top: 5rem;
     }
 }
 /* hero section is completed  */
@@ -63,6 +75,9 @@
 
     .how-text {
         text-align: center;
+    }
+    .wrapinnng{
+        flex-direction: column-reverse;
     }
 }
 

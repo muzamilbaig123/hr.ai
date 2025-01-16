@@ -8,7 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 :root {
-    --primary-color: #665BEB;
+    --primary-color: #bb1823;
     --text-color: #333;
     --background-color: #fff;
 }
@@ -85,7 +85,7 @@ nav a.active::after {
     transition: background-color 0.3s;
 }
 .try-now-btn:hover {
-    background-color: #6700cc;
+    background-color: #b6131e;
 }
 .body {
     display: flex;
@@ -557,7 +557,7 @@ nav a.active::after {
     color: white;
 }
 .get-started-btn {
-    padding: 0.75rem;
+    padding: 0.75rem 1rem;
     border: none;
     border-radius: 100px;
     font-weight: 500;

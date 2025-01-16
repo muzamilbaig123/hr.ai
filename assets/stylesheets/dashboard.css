@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #8000ff;
+    --primary-color: #bb1823;
     --primary-light: #000000;
     --text-color: #fff;
     --border-color: #ddd;
@@ -204,7 +204,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #6600cc;
+    background-color: #d60e1b;
 }
 
 .btn-back {
